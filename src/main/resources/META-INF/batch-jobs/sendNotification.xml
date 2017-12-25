@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job id="sendNotification" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd"
+    version="1.0">
+    <step id="createJob" next="fetchUsers">
+    	<batchlet ref="createJobBachlet"></batchlet>
+    </step>
+    <step id="fetchUsers" next="updateJob">
+    	<chunk item-count="4" retry-limit="3">
+    		<reader ref="userItemReader"></reader>
+    		<processor ref="userItemProcessor"></processor>
+    		<writer ref="userItemWriter"></writer>
+    		<retryable-exception-classes>
+    			<include class="java.lang.IllegalArgumentException"/>
+    		</retryable-exception-classes>
+    	</chunk>
+    </step>
+    <step id="updateJob">
+    	<batchlet ref="updateJobBachlet"></batchlet>
+    </step>
+</job>
