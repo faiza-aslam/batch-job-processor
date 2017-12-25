@@ -5,6 +5,7 @@ The use case is to send SMS/Email notification on daily basis to some particular
 ### Technology Stack
 * JavaEE 7
 * EJBs
+* CDI
 * WildFly 10
 * MySQL
 
