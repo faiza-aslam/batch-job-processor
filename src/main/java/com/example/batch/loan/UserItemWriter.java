@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.batch.api.chunk.AbstractItemWriter;
-import javax.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -14,9 +13,6 @@ import com.example.model.JobTasks;
 @Named
 public class UserItemWriter extends AbstractItemWriter {
 
-	@Inject
-	private JobContext jobContext;
-	
 	@Inject
 	BatchService service;
 
@@ -32,7 +28,6 @@ public class UserItemWriter extends AbstractItemWriter {
 			
 		});
 		service.saveUsers(users);
-		System.out.println("instance id="+jobContext.getInstanceId()+" ----- job id="+jobContext.getExecutionId()+" ---- batch status: "+jobContext.getBatchStatus()+" ----- ExitStatus: "+jobContext.getExitStatus());
 	}
 
 }

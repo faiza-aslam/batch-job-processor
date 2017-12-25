@@ -14,7 +14,6 @@ import com.example.model.JobTasks;
 @Named
 public class UserItemReader extends AbstractItemReader {
 	
-	/*private List<JobTasks> users = new ArrayList<>();*/
 	private Iterator<JobTasks> iterator = null;
 	private JobTasks lastElement;
 	

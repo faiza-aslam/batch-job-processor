@@ -17,7 +17,6 @@ import com.example.model.Job;
 import com.example.model.JobTasks;
 
 @Stateless
-//@TransactionManagement(value=TransactionManagementType.BEAN)
 public class BatchService {
 	
 	@Resource(lookup = "java:jboss/jdbc/tez-ds")

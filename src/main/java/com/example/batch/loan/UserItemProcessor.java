@@ -20,18 +20,11 @@ public class UserItemProcessor implements ItemProcessor {
 		JobTasks user = (JobTasks) item;
 		System.out.println("processItem user --- : " + user.getUserId());
 		
-		
-		System.out.println("Sending sms to user : "+user.getUserId());
-		
-		
 		String jobId = BatchRuntime.getJobOperator().getParameters(jobContext.getExecutionId()).getProperty("job-id");
 		user.setJobId(Integer.parseInt(jobId));
 		
-		/*if(user.getUserId().equals(49)) { 
-			System.out.println("################# Throwing Exception #####################");
-			throw new IllegalArgumentException("Unexpected error has occurred-----------"); 
-		}*/
-		
+		//Here any notification can be sent to user
+				
 		return user;
 	}
 
