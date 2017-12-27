@@ -2,8 +2,8 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="batchJobPU">
-		<jta-data-source>java:jboss/jdbc/preferences-ds</jta-data-source>
-		<class>com.example.model.Job</class>
-		<class>com.example.model.JobTasks</class>
+		<jta-data-source>java:jboss/jdbc/batch-ds</jta-data-source>
+		<class>com.example.model.User</class>
+		<class>com.example.model.UserTask</class>
 	</persistence-unit>
 </persistence>
