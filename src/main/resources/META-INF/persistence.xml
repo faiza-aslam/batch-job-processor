@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="batchJobPU">
 		<jta-data-source>java:jboss/jdbc/batch-ds</jta-data-source>
-		<class>com.example.model.User</class>
-		<class>com.example.model.UserTask</class>
+		<class>com.example.batch.model.User</class>
+		<class>com.example.batch.model.UserTask</class>
 	</persistence-unit>
 </persistence>

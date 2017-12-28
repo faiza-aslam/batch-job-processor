@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.batch.model;
 
 import java.io.Serializable;
 import java.util.Date;

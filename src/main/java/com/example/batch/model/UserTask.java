@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.batch.model;
 
 import java.util.Date;
 

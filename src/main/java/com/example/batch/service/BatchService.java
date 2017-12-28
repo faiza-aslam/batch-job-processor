@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import com.example.batch.dao.BatchDao;
-import com.example.model.UserTask;
+import com.example.batch.model.UserTask;
 
 @Stateless
 public class BatchService {

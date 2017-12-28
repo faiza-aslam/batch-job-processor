@@ -11,8 +11,8 @@ import javax.inject.Named;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.example.batch.model.UserTask;
 import com.example.batch.service.BatchService;
-import com.example.model.UserTask;
 
 @Named
 public class TaskItemReader extends AbstractItemReader {

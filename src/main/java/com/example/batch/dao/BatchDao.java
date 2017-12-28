@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.example.model.UserTask;
+import com.example.batch.model.UserTask;
 
 public class BatchDao {
 	
